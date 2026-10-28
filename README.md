@@ -103,4 +103,160 @@ These scenarios help demonstrate how the system responds to failures and how rec
 
 Update this section to reflect the technologies actually used in your implementation.
 
-- **Frontend:** React, HTML, CSS, or
+- **Frontend:** React, HTML, CSS, or the framework used by the project
+- **Backend:** Python and FastAPI, if configured
+- **Data Storage:** SQLite or the database used by the project
+- **AI Integration:** The configured LLM provider and model, if implemented
+- **Validation:** Pydantic or another validation mechanism, if used
+- **Monitoring:** Application logs, API status checks, and error tracking
+- **Version Control:** Git and GitHub
+
+## ⚙️ Installation and Setup
+
+### Prerequisites
+
+Install the tools required by your project, such as:
+
+- Git
+- Node.js and npm, if the frontend uses React
+- Python 3.10 or later, if the backend uses Python
+- API credentials for any external services your project requires
+
+### 1. Clone the repository
+
+```bash
+git clone <YOUR_REPOSITORY_URL>
+cd <YOUR_PROJECT_FOLDER>
+```
+
+Replace the placeholders with your actual repository URL and folder name.
+
+### 2. Set up the backend
+
+If your backend uses Python and FastAPI:
+
+```bash
+python -m venv venv
+```
+
+Activate the environment.
+
+**Windows:**
+
+```bash
+venv\Scripts\activate
+```
+
+**macOS/Linux:**
+
+```bash
+source venv/bin/activate
+```
+
+Install the dependencies listed in your project:
+
+```bash
+pip install -r requirements.txt
+```
+
+Start the backend using the entry point configured in your application. For example, if your entry file is `main.py`:
+
+```bash
+uvicorn main:app --reload
+```
+
+### 3. Set up the frontend
+
+If your frontend uses npm:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Adjust the folder name and commands to match your actual project structure.
+
+### 4. Configure environment variables
+
+Create a `.env` file if your application requires API keys or configuration values.
+
+Example:
+
+```env
+# Add only the variables your application actually uses
+AI_API_KEY=your_api_key_here
+BACKEND_URL=http://localhost:8000
+```
+
+Use the exact variable names expected by your code. Never commit real API keys, passwords, or other secrets to GitHub.
+
+### 5. Open the application
+
+Open the local URL displayed by your frontend development server. Ensure that the backend is running and that the frontend is configured to communicate with it.
+
+## ▶️ How to Use
+
+1. Launch the application.
+2. Explore the customer-support interface.
+3. Open the administrative dashboard, if available.
+4. Review API health indicators and incident information.
+5. Trigger a supported failure scenario using the failure simulator.
+6. Observe the detected error and its diagnosis.
+7. Review or initiate the available recovery action.
+8. Check the verification result and incident history.
+
+The exact steps depend on the features enabled in your implementation.
+
+## 🔐 Safety and Reliability
+
+Self-healing automation must be controlled and verifiable. ResolveAI's intended design principles include:
+
+- Validate recovery actions before execution.
+- Use bounded retries to avoid retry loops.
+- Restrict automated changes to approved operations.
+- Require human approval for high-risk changes.
+- Record recovery attempts and their outcomes.
+- Report success only after verification.
+
+AI-generated diagnoses should be treated as suggestions unless independently validated. A successful diagnosis does not necessarily mean that a service has been repaired.
+
+## 🎯 Use Cases
+
+- Customer-support automation
+- API failure detection and diagnosis
+- Automated retry and recovery workflows
+- Testing backend resilience
+- Incident tracking and recovery analysis
+- Demonstrations of AI-assisted operations
+
+## 🔮 Future Enhancements
+
+Potential improvements include:
+
+- Real-time monitoring and alert notifications
+- Integration with additional APIs and services
+- More advanced root-cause analysis
+- Configurable recovery policies
+- Human approval workflows for sensitive repairs
+- Metrics for recovery success rate and time to recovery
+- Persistent incident analytics and reporting
+- Deployment with production monitoring and access controls
+
+## 🏆 Project Purpose
+
+ResolveAI was developed as a project exploring the **Self-Healing AI Automation System** concept. It demonstrates how AI-assisted diagnosis can work alongside deterministic validation, controlled automation, and verification to improve application resilience.
+
+## 👥 Contributors
+
+- **Team:** Add your team name
+- **Developers:** Add contributor names
+- **Event:** Add hackathon name, if applicable
+
+## 📄 License
+
+Choose and add a license appropriate for your project before distributing it publicly.
+
+---
+
+**ResolveAI — From error detection to verified recovery.**
